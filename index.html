@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Defesa de Dissertação Acadêmica</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#00522a",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary-container": "#799dd6",
+                        "on-surface-variant": "#43474f",
+                        "primary-fixed": "#d5e3ff",
+                        "secondary-fixed-dim": "#83d99c",
+                        "surface-tint": "#3a5f94",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-secondary-fixed": "#00210e",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed": "#9ef6b6",
+                        "tertiary-container": "#592300",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#9ef6b6",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-secondary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed": "#341100",
+                        "tertiary": "#381300",
+                        "on-surface": "#191c1d",
+                        "on-secondary-container": "#177341",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-variant": "#e1e3e4",
+                        "primary-container": "#003366",
+                        "inverse-primary": "#a7c8ff",
+                        "on-primary-fixed": "#001b3c",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary": "#0b6d3b",
+                        "on-error-container": "#93000a",
+                        "outline": "#737780",
+                        "on-tertiary-fixed-variant": "#723610",
+                        "primary": "#001e40",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-container": "#d8885c",
+                        "outline-variant": "#c3c6d1"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-hidden h-screen flex flex-col">
+
+    <div class="flex flex-1 pt-0 pb-16 h-full w-full">
+        <!-- SideNavBar -->
+        <aside
+            class="fixed left-0 top-0 bottom-16 w-64 z-40 flex flex-col pt-6 pb-8 bg-slate-50 dark:bg-[#001e40] border-r border-surface-container-highest tonal-shift">
+            <div class="px-6 mb-8">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white">school</span>
+                    </div>
+                    <div>
+                        <h2 class="font-serif italic text-lg text-blue-900 dark:text-blue-100 leading-tight">Mestrado em
+                            Gestão da Inovação</h2>
+                        <p class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500">PPGECO / UnB
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex-1 flex flex-col gap-1" id="side-nav">
+                <div class="nav-item active bg-white dark:bg-slate-800 text-[#0b6d3b] font-bold rounded-l-full shadow-sm ml-4 pl-6 py-3 flex items-center gap-4 transition-transform duration-200 cursor-pointer"
+                    data-slide="1">
+                    <span class="material-symbols-outlined">menu_book</span>
+                    <span class="font-sans uppercase tracking-widest text-xs font-bold">Introdução</span>
+                </div>
+                <div class="nav-item text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 ml-4 pl-6 py-3 flex items-center gap-4 hover:translate-x-1 transition-transform duration-200 cursor-pointer"
+                    data-slide="2">
+                    <span class="material-symbols-outlined">biotech</span>
+                    <span class="font-sans uppercase tracking-widest text-xs font-bold">Metodologia</span>
+                </div>
+                <div class="nav-item text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 ml-4 pl-6 py-3 flex items-center gap-4 hover:translate-x-1 transition-transform duration-200 cursor-pointer"
+                    data-slide="3">
+                    <span class="material-symbols-outlined">monitoring</span>
+                    <span class="font-sans uppercase tracking-widest text-xs font-bold">Resultados Gerais</span>
+                </div>
+                <div class="nav-item text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 ml-4 pl-6 py-3 flex items-center gap-4 hover:translate-x-1 transition-transform duration-200 cursor-pointer"
+                    data-slide="4">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <span class="font-sans uppercase tracking-widest text-xs font-bold">Por Dimensão</span>
+                </div>
+                <div class="nav-item text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 ml-4 pl-6 py-3 flex items-center gap-4 hover:translate-x-1 transition-transform duration-200 cursor-pointer"
+                    data-slide="5">
+                    <span class="material-symbols-outlined">warning</span>
+                    <span class="font-sans uppercase tracking-widest text-xs font-bold">Gaps Críticos</span>
+                </div>
+                <div class="nav-item text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 ml-4 pl-6 py-3 flex items-center gap-4 hover:translate-x-1 transition-transform duration-200 cursor-pointer"
+                    data-slide="6">
+                    <span class="material-symbols-outlined">task_alt</span>
+                    <span class="font-sans uppercase tracking-widest text-xs font-bold">Conclusões</span>
+                </div>
+            </nav>
+
+            <!-- <div class="px-8 mt-auto flex items-center gap-3">
+                <div class="w-55 h-10 bg-surface-container-highest overflow-hidden border border-outline-variant">
+                    <img alt="UnB" class="w-full h-full object-cover" src="./static/img/as_bas_cor.jpg" />
+                </div>
+                <div>
+                    <div class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Universidade
+                        de Brasília</div>
+                </div>
+            </div> -->
+        </aside>
+
+        <!-- Main Content Area - modificado para overflow-hidden e centralizar o scaler -->
+        <main class="ml-64 flex-1 h-full relative overflow-hidden bg-surface" id="slides-container">
+
+            <!-- Slide 0: Capa -->
+            <div class="slide-section active-slide" id="slide-0">
+                <div class="slide-scaler">
+                    <div class="grid grid-cols-12 gap-8 items-stretch h-full w-full">
+                        <div class="col-span-12 lg:col-span-7 flex flex-col justify-center pr-8">
+                            <!-- <div class="inline-flex items-center gap-4 mb-8">
+                                <span class="h-[2px] w-12 bg-secondary"></span>
+                                <span
+                                    class="font-sans uppercase tracking-[0.3em] text-xs font-bold text-on-surface-variant">Defesa
+                                    de Dissertação de Mestrado</span>
+                            </div> -->
+                            <h1
+                                class="font-headline text-5xl md:text-7xl font-bold text-primary leading-[1.1] mb-10 tracking-tight">
+                                GOVERNANÇA DE DADOS NA SEGURANÇA PÚBLICA: <span
+                                    class="italic text-secondary">DIAGNÓSTICO NACIONAL</span> À LUZ DO MMD.
+                            </h1>
+                            <div class="space-y-6 max-w-xl">
+                                <!-- <div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
+                                    <p
+                                        class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-1">
+                                        Autor</p>
+                                    <p class="font-headline text-2xl font-semibold text-primary">Igor Muniz da Silva</p>
+                                </div> -->
+                                <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <p
+                                            class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-1">
+                                            Instituição</p>
+                                        <p class="font-body text-sm leading-relaxed text-on-surface">Universidade de
+                                            Brasília (UnB)<br />FACE, Pós-Graduação em Economia</p>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-1">
+                                            Orientador</p>
+                                        <p class="font-body text-sm leading-relaxed text-on-surface">Prof. Dr. Leonardo
+                                            Cavalcanti Da Silva</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <!-- <div class="mt-12 flex gap-4">
+                                <button onclick="nextSlide()"
+                                    class="bg-primary text-on-primary px-8 py-4 rounded-xl font-sans font-bold tracking-widest text-xs uppercase hover:opacity-90 transition-all flex items-center gap-2">
+                                    <span>Iniciar Apresentação</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div> -->
+                        </div>
+
+                        <div class="col-span-12 lg:col-span-5  h-[600px] my-auto">
+                            <div class="space-y-6 max-w-xl">
+                                <div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
+                                    <p
+                                        class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-1">
+                                        Autor</p>
+                                    <p class="font-headline text-2xl font-semibold text-primary">Igor Muniz da Silva</p>
+                                </div>
+                                <div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
+                                    <p
+                                        class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-1">
+                                        Orientador</p>
+                                    <p class="font-headline text-2xl font-semibold text-primary">Prof. Dr. Leonardo
+                                        Cavalcanti Da Silva</p>
+                                </div>
+                                <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <p
+                                            class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-1">
+                                            Instituição</p>
+                                        <p class="font-body text-sm leading-relaxed text-on-surface">Universidade de
+                                            Brasília (UnB)<br />FACE, Pós-Graduação em Economia</p>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="font-sans uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-1">
+                                            Orientador</p>
+                                        <p class="font-body text-sm leading-relaxed text-on-surface">Prof. Dr. Leonardo
+                                            Cavalcanti Da Silva</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <!-- <div class="col-span-2 row-span-2 relative overflow-hidden rounded-xl editorial-shadow">
+                                <img class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAxxJoyp98JZ3CmsTsvQhEyQbIjPmwby6t8eBLImH6DSB2M3reqpc9HPwuLW54kT-_N5Y0Fcf-LgkrtfrDRSzRspTCMdVMx29qA4Zt1EE8U4uqikzG-Sq8SjGUtum4-Tq2jHhyx3h7036x-zfC5uu2uQ_AHK49xmQpJ1l5-mc3cOMG0HONsEIrrtGhfr6Q3jEO_IlXt-HVpImZqXxj5KAHhh2mjhN_yuoWOnB3bCqnIynB81LQCsxv9UpsTMVHDdieRQODimR_E3U" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 glass-legend p-4 rounded-lg">
+                                    <p class="font-headline italic text-white text-lg leading-snug">"O dado é o ativo
+                                        estratégico dos sistemas modernos de segurança pública."</p>
+                                </div>
+                            </div>
+                            <div
+                                class="col-span-1 bg-secondary p-6 rounded-xl flex flex-col justify-between text-white overflow-hidden relative">
+                                <span
+                                    class="material-symbols-outlined opacity-20 text-6xl absolute -right-2 -bottom-2">analytics</span>
+                                <span class="font-sans uppercase tracking-widest text-[10px] font-bold">Foco do
+                                    Modelo</span>
+                                <p class="font-headline text-xl font-semibold leading-tight">Diagnóstico de Maturidade
+                                    (MMD)</p>
+                            </div>
+                            <div
+                                class="col-span-1 bg-surface-container-highest p-6 rounded-xl flex flex-col justify-between text-primary border border-outline-variant/15">
+                                <span
+                                    class="font-sans uppercase tracking-widest text-[10px] font-bold text-on-surface-variant">Ano</span>
+                                <p class="font-headline text-3xl font-bold tracking-tighter">2026</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 1: Introdução e Problema -->
+            <div class="slide-section hidden" id="slide-1">
+                <div class="slide-scaler flex flex-col justify-center">
+                    <div class="grid grid-cols-12 gap-8 mb-16">
+                        <div class="col-span-7">
+                            <h1 class="text-6xl font-bold text-primary italic leading-tight tracking-tight mb-4">
+                                Introdução e Problema</h1>
+                            <div class="h-1 w-24 bg-secondary"></div>
+                        </div>
+                        <!-- <div class="col-span-5 flex items-end">
+                            <p
+                                class="text-sm text-on-surface-variant font-light tracking-wide leading-relaxed border-l border-outline-variant pl-6">
+                                Uma análise do atrito fundamental entre as fronteiras políticas e a natureza fluida da
+                                criminalidade contemporânea.
+                            </p>
+                        </div> -->
+                    </div>
+
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-8 bg-surface-container-low p-10 rounded-lg group relative overflow-hidden">
+                            <div class="relative z-10">
+                                <span class="material-symbols-outlined text-4xl text-secondary mb-6 block">public</span>
+                                <h3 class="text-2xl font-semibold text-primary mb-4 font-headline">A segurança pública é
+                                    descentralizada, mas o crime ignora fronteiras.</h3>
+                                <p class="text-on-surface-variant leading-relaxed font-light text-lg">
+                                    A fragmentação institucional cria silos operacionais que redes criminosas exploram
+                                    com precisão digital. O cenário de ameaças é inerentemente sem fronteiras.
+                                </p>
+                            </div>
+                            <div
+                                class="absolute -right-12 -bottom-12 opacity-5 scale-150 transform group-hover:scale-125 transition-transform duration-500">
+                                <span class="material-symbols-outlined text-[200px]">map</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-span-4 bg-primary text-on-primary p-10 rounded-lg flex flex-col justify-between">
+                            <div>
+                                <span
+                                    class="material-symbols-outlined text-4xl text-on-primary-container mb-6 block">hub</span>
+                                <h3 class="text-xl font-medium mb-4 italic font-headline">Necessidade de integração.
+                                </h3>
+                                <p class="text-primary-fixed-dim text-sm leading-relaxed">
+                                    A interoperabilidade não é uma preferência técnica — é necessidade estratégica.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-span-12 bg-surface-container-highest p-10 rounded-lg flex gap-10 items-center border-l-4 border-primary">
+                            <div class="flex-grow">
+                                <h4
+                                    class="font-sans uppercase tracking-[0.2em] text-[10px] font-extrabold text-primary mb-2">
+                                    O Paradoxo</h4>
+                                <h3 class="text-3xl font-bold text-primary italic font-headline mb-4">Garbage In,
+                                    Garbage Out</h3>
+                                <p class="text-on-surface-variant leading-relaxed italic">
+                                    O contrato social clássico repousa na promessa de proteção. Na era moderna,
+                                    investimentos massivos na "ponta" (IA, analytics) falham estruturalmente se a "base"
+                                    (governança, qualidade, semântica) é fragmentada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Metodologia e MMD -->
+            <div class="slide-section hidden" id="slide-2">
+                <div class="slide-scaler flex flex-col justify-center">
+                    <section class="grid grid-cols-12 gap-8 mb-16 items-end">
+                        <div class="col-span-12 md:col-span-7">
+                            <span
+                                class="text-secondary font-sans font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Estrutura
+                                de Pesquisa</span>
+                            <h1 class="text-6xl text-primary font-headline font-bold leading-[1.1] mb-6 italic">
+                                Metodologia: O Modelo de Maturidade de Dados
+                            </h1>
+                            <p class="text-on-surface-variant font-body text-lg max-w-2xl leading-relaxed">
+                                Abordagem multidimensional validada por meio de levantamento abrangendo 26 unidades
+                                federativas.
+                            </p>
+                        </div>
+                        <div class="col-span-12 md:col-span-5 flex justify-end">
+                            <div
+                                class="bg-surface-container-low p-8 rounded-xl max-w-xs text-right relative overflow-hidden w-full">
+                                <div class="text-5xl font-headline font-bold text-primary mb-2">26</div>
+                                <div class="text-xs font-sans uppercase tracking-widest font-bold text-secondary">
+                                    Unidades Federativas</div>
+                                <p class="text-[11px] text-on-surface-variant mt-4 leading-relaxed italic">Escopo
+                                    nacional abrangente.</p>
+                                <div class="absolute -right-4 -bottom-4 opacity-10">
+                                    <span class="material-symbols-outlined text-8xl">map</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="grid grid-cols-12 gap-8">
+                        <div
+                            class="col-span-4 bg-primary text-on-primary p-10 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-4xl font-headline italic mb-4">Escala Evolutiva</h2>
+                                <p class="text-on-primary-container text-sm leading-relaxed mb-8">O MMD define cinco
+                                    níveis progressivos de maturidade, do vazio institucional à otimização sistêmica
+                                    total.</p>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <span
+                                        class="w-8 h-8 rounded-full border border-secondary flex items-center justify-center text-xs font-bold text-secondary">1</span>
+                                    <span class="text-xs tracking-widest uppercase font-bold text-secondary">Não
+                                        Iniciado</span>
+                                </div>
+                                <div class="w-px h-6 bg-secondary/30 ml-4"></div>
+                                <div class="flex items-center space-x-3">
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-xs font-bold text-white">5</span>
+                                    <span
+                                        class="text-xs tracking-widest uppercase font-bold text-white">Otimizado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-span-8 space-y-3">
+                            <div class="flex items-center justify-between p-6 bg-surface-container-low rounded-lg">
+                                <div class="flex items-center space-x-6">
+                                    <span class="text-2xl font-headline italic text-slate-400">01</span>
+                                    <span class="font-sans font-bold uppercase tracking-wider">Não Iniciado</span>
+                                </div>
+                                <p class="text-xs text-on-surface-variant max-w-md">Ausência de estruturas formais de
+                                    dados ou protocolos de governança.</p>
+                            </div>
+                            <div class="flex items-center justify-between p-6 bg-surface-container-low rounded-lg">
+                                <div class="flex items-center space-x-6">
+                                    <span class="text-2xl font-headline italic text-slate-400">02</span>
+                                    <span class="font-sans font-bold uppercase tracking-wider">Iniciado</span>
+                                </div>
+                                <p class="text-xs text-on-surface-variant max-w-md">Processos ad-hoc e tentativas
+                                    isoladas de gestão de dados.</p>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-6 bg-surface-container-low rounded-lg border-l-4 border-secondary/40">
+                                <div class="flex items-center space-x-6">
+                                    <span class="text-2xl font-headline italic text-slate-500">03</span>
+                                    <span class="font-sans font-bold uppercase tracking-wider">Emergente</span>
+                                </div>
+                                <p class="text-xs text-on-surface-variant max-w-md">Padrões institucionais são
+                                    estabelecidos e documentados.</p>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-6 bg-surface-container-low rounded-lg border-l-4 border-secondary/70">
+                                <div class="flex items-center space-x-6">
+                                    <span class="text-2xl font-headline italic text-slate-700">04</span>
+                                    <span class="font-sans font-bold uppercase tracking-wider">Desenvolvido</span>
+                                </div>
+                                <p class="text-xs text-on-surface-variant max-w-md">Métricas são ativamente rastreadas e
+                                    qualidade é controlada.</p>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-6 bg-surface-container-highest rounded-lg border-l-8 border-secondary">
+                                <div class="flex items-center space-x-6">
+                                    <span class="text-2xl font-headline italic text-primary">05</span>
+                                    <span
+                                        class="font-sans font-bold uppercase tracking-wider text-primary">Otimizado</span>
+                                </div>
+                                <p class="text-xs text-primary font-medium max-w-md">Ciclo de melhoria contínua e tomada
+                                    de decisão integrada.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Slide 3: Resultados Gerais -->
+            <div class="slide-section hidden" id="slide-3">
+                <div class="slide-scaler flex flex-col justify-center">
+                    <div class="grid grid-cols-12 gap-8 mb-16 items-end">
+                        <div class="col-span-8">
+                            <!-- <span class="text-secondary font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Achados
+                                Empíricos</span> -->
+                            <h1 class="text-6xl font-bold text-primary leading-tight tracking-tight italic">Distribuição
+                                da Maturidade</h1>
+                        </div>
+                        <!-- <div class="col-span-4 pb-2 border-l border-outline-variant/30 pl-8">
+                            <p class="text-on-surface-variant text-sm leading-relaxed italic">
+                                Concentração crítica nos estágios iniciais sugere um gargalo de desenvolvimento
+                                significativo.
+                            </p>
+                        </div> -->
+                    </div>
+
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-8 bg-surface-container-low rounded-xl p-10 relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-primary mb-1">Frequência do Nível de Maturidade
+                                    </h3>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-4xl font-headline font-bold text-secondary italic">~3.0</span>
+                                    <span
+                                        class="block text-[10px] uppercase tracking-widest font-bold text-outline">Média
+                                        Nacional</span>
+                                </div>
+                            </div>
+
+                            <!-- Interativo Chart.js -->
+                            <div class="w-full h-64 relative">
+                                <canvas id="chartGeral"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="col-span-4 flex flex-col gap-6">
+                            <div class="bg-primary p-8 rounded-xl text-on-primary relative overflow-hidden flex-1">
+                                <div class="relative z-10">
+                                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] opacity-60 mb-6">Assimetria
+                                        Federativa</h3>
+                                    <div class="flex items-baseline gap-2 mb-4">
+                                        <span class="text-5xl font-headline font-bold italic">Forte</span>
+                                    </div>
+                                    <p class="text-sm leading-relaxed opacity-90">
+                                        Alta disparidade na infraestrutura e adoção de políticas entre os entes
+                                        federados (UFs).
+                                    </p>
+                                </div>
+                                <div class="absolute -right-4 -bottom-4 opacity-10">
+                                    <span class="material-symbols-outlined text-[160px]">monitoring</span>
+                                </div>
+                            </div>
+                            <div class="bg-white border border-outline-variant/20 p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="bg-secondary/10 p-2 rounded-lg">
+                                        <span class="material-symbols-outlined text-secondary">trending_up</span>
+                                    </div>
+                                    <span
+                                        class="text-xs font-bold uppercase tracking-widest text-primary">Tendência</span>
+                                </div>
+                                <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+                                    Predominância de Nível 2 e 3 (Emergente), marcando transição de inércia para
+                                    implementação formal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Por Dimensão -->
+            <div class="slide-section hidden" id="slide-4">
+                <div class="slide-scaler flex flex-col justify-center">
+                    <div class="mb-16">
+                        <span
+                            class="font-label text-sm font-bold uppercase tracking-[0.2em] text-secondary mb-4 block">Detalhe</span>
+                        <h1 class="font-headline text-6xl font-bold italic text-primary leading-tight">Maturidade por
+                            Dimensão</h1>
+                    </div>
+
+                    <div class="grid grid-cols-12 gap-8 mb-16">
+                        <div
+                            class="col-span-12 lg:col-span-8 bg-surface-container-lowest p-10 rounded-xl shadow-sm border border-surface-container relative overflow-hidden">
+                            <div class="flex justify-between items-baseline mb-6">
+                                <h3 class="font-headline text-2xl font-semibold text-primary">Ranking de Desempenho</h3>
+                            </div>
+
+                            <!-- Interativo Chart.js -->
+                            <div class="w-full h-80 relative">
+                                <canvas id="chartDimensoes"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="col-span-12 lg:col-span-4 flex flex-col gap-8">
+                            <div class="bg-primary-container p-8 rounded-xl text-white relative overflow-hidden flex-1">
+                                <div class="relative z-10">
+                                    <h4
+                                        class="font-label text-[10px] font-bold uppercase tracking-[0.3em] mb-4 text-on-primary-container">
+                                        Correlações Fortes (+0.87)</h4>
+                                    <p class="font-body text-sm leading-relaxed opacity-90 mt-4">
+                                        <span class="font-bold">Análise de Dados x Governança</span><br />
+                                        A maturidade analítica depende intimamente de liderança e letramento.
+                                    </p>
+                                    <p class="font-body text-sm leading-relaxed opacity-90 mt-4">
+                                        <span class="font-bold">Interoperabilidade x Qualidade</span><br />
+                                        O esforço de integrating sistemas expõe inconsistências de base imediatamente.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-secondary-container p-8 rounded-xl flex items-start gap-4">
+                                <span class="material-symbols-outlined text-on-secondary-container">lightbulb</span>
+                                <div>
+                                    <h4 class="font-body font-bold text-on-secondary-container mb-1">Destaques Positivos
+                                    </h4>
+                                    <p class="font-body text-xs text-on-secondary-fixed-variant leading-relaxed">
+                                        Dados como Ativo Estratégico (3.60) e Análise (3.45) mostram alinhamento com a
+                                        diretriz de decisão guiada por evidências.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Gaps -->
+            <div class="slide-section hidden" id="slide-5">
+                <div class="slide-scaler flex flex-col justify-center">
+                    <div class="grid grid-cols-12 gap-8 mb-16">
+                        <div class="col-span-7">
+                            <h1
+                                class="font-headline italic text-6xl font-bold tracking-tight text-primary mb-4 leading-tight">
+                                Gaps Críticos e <span class="text-secondary">Desafios</span>
+                            </h1>
+                        </div>
+                        <!-- <div class="col-span-5 flex flex-col justify-end items-end">
+                            <div class="bg-primary text-white p-6 rounded-xl w-full border-none">
+                                <p class="text-sm font-light italic">"A divergência entre estratégia e implementação
+                                    técnica revela a fricção da transformação digital."</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-4 bg-surface-container-low p-8 rounded-xl relative overflow-hidden group">
+                            <div class="relative z-10 h-full flex flex-col">
+                                <div
+                                    class="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow-sm mb-6">
+                                    <span class="material-symbols-outlined text-error">abc</span>
+                                </div>
+                                <h3 class="font-headline text-2xl font-bold text-primary mb-4">Glossário de Termos
+                                    (2.38)</h3>
+                                <p class="font-body text-sm text-on-surface-variant leading-relaxed flex-grow">
+                                    Falta padronização semântica. A ausência de léxico unificado cria inconsistências
+                                    críticas na classificação de dados e inteligência.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-4 bg-surface-container-low p-8 rounded-xl relative overflow-hidden group">
+                            <div class="relative z-10 h-full flex flex-col">
+                                <div
+                                    class="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow-sm mb-6">
+                                    <span class="material-symbols-outlined text-error">sync</span>
+                                </div>
+                                <h3 class="font-headline text-2xl font-bold text-primary mb-4">Interoperabilidade (1.96)
+                                </h3>
+                                <p class="font-body text-sm text-on-surface-variant leading-relaxed flex-grow">
+                                    Deficiência no rastreamento e saúde da troca de dados. Sistemas não conversam de
+                                    forma estruturada.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-4 bg-primary p-8 rounded-xl relative overflow-hidden group">
+                            <div class="relative z-10 h-full flex flex-col">
+                                <div
+                                    class="bg-primary-container w-12 h-12 rounded-lg flex items-center justify-center shadow-sm mb-6">
+                                    <span class="material-symbols-outlined text-white">psychology</span>
+                                </div>
+                                <h3 class="font-headline text-2xl font-bold text-white mb-4">Inteligência Artificial
+                                    (2.00)</h3>
+                                <p class="font-body text-sm text-primary-fixed leading-relaxed flex-grow">
+                                    Desenvolvimento de IA desconectado de uma governança madura de base. Sem estratégia
+                                    centralizada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Conclusões -->
+            <div class="slide-section hidden" id="slide-6">
+                <div class="slide-scaler flex flex-col justify-center">
+                    <div class="grid grid-cols-12 gap-8 mb-16 items-end">
+                        <div class="col-span-12 md:col-span-8">
+                            <span
+                                class="text-secondary font-label uppercase tracking-[0.2em] text-xs font-bold mb-4 block">Síntese</span>
+                            <h1
+                                class="font-headline text-6xl md:text-7xl font-bold text-primary italic leading-[1.1] tracking-tighter">
+                                Considerações Finais <span
+                                    class="block font-normal not-italic text-on-surface-variant">& Recomendações</span>
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 gap-6">
+                        <div
+                            class="col-span-12 lg:col-span-5 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between overflow-hidden relative">
+                            <div class="relative z-10">
+                                <h3 class="font-headline text-3xl font-semibold mb-6 leading-tight">O Papel
+                                    Institucionalizador do SINESP e SUSP</h3>
+                                <p class="font-body text-on-primary-container text-lg leading-relaxed opacity-90">
+                                    Os achados demonstram ser imperativo transformar arranjos temporários e locais em
+                                    estruturas fixas integradas de nível nacional.
+                                </p>
+                            </div>
+                            <div
+                                class="absolute -right-20 -bottom-20 w-80 h-80 bg-gradient-to-tr from-secondary/40 to-transparent rounded-full blur-3xl">
+                            </div>
+                        </div>
+
+                        <div class="col-span-12 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-surface-container-low rounded-md p-6 border-l-4 border-secondary">
+                                <div
+                                    class="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                                    <span class="material-symbols-outlined text-primary">abc</span>
+                                </div>
+                                <h4 class="font-headline text-xl font-bold text-primary mb-3">Superar Fragmentação
+                                    Semântica</h4>
+                                <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+                                    Implementar vocabulários e métricas padronizadas inter-forças para acabar com a
+                                    classificação local isolada.
+                                </p>
+                            </div>
+                            <div class="bg-surface-container-low rounded-md p-6 border-l-4 border-secondary">
+                                <div
+                                    class="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                                    <span class="material-symbols-outlined text-primary">psychology</span>
+                                </div>
+                                <h4 class="font-headline text-xl font-bold text-primary mb-3">IA Ética e Transparente
+                                </h4>
+                                <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+                                    Transição de projetos-piloto de IA isolados para diretrizes robustas que garantam
+                                    mitigação de viés discriminatório.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-section hidden" id="slide-7">
+                <div
+                    class="col-span-12 mt-6 py-12 px-12 bg-surface-container-lowest border border-outline-variant/15 rounded-xl text-center relative overflow-hidden">
+                    <h2 class="font-headline text-4xl font-bold text-primary italic leading-tight max-w-4xl mx-auto">
+                        "A governança não é sobre burocracia, mas sobre soberania analítica do Estado em
+                        benefício do cidadão."
+                    </h2>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-3 bg-white dark:bg-[#001e40] border-t border-surface-container-highest tonal-shift">
+        <div class="font-sans text-[10px] tracking-widest uppercase text-slate-400 dark:text-slate-500">
+            © 2026 UnB | PPGECO
+        </div>
+        <div class="flex gap-8 items-center">
+            <span class="font-sans text-[10px] tracking-widest uppercase text-[#0b6d3b] font-bold"
+                id="slide-indicator">Slide 00/07</span>
+            <span class="font-sans text-[10px] tracking-widest uppercase text-slate-400 dark:text-slate-500">Igor Muniz
+                da Silva</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
